@@ -1,33 +1,50 @@
 .App {
-  text-align: center;
+    height: 100vh;
+    background: black;
+    animation: changeBG .1s forwards;
+    animation-delay: 1.4s
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.router-container {
+    opacity: 0;
+    animation: showMain 1s ease-in-out forwards;
+    animation-delay: 0.5s
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.line {
+    width: 100%;
+    height: 1px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ani 1.3s ease-in-out forwards;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes ani {
+    from {
+        
+    } to {
+        background: white;
+        height: 100vh;
+    }
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes showMain {
+    from {
+
+    } to {
+        opacity: 1;
+    }
 }
+
+@keyframes changeBG {
+    from {
+
+    } to {
+        background: white;
+    }
+}
+
